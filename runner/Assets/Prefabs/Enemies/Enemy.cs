@@ -1,36 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : movingGameObject
+{
     public int Health;
-    public float Speed;
-    static float difficulty = 0.1f;
+    public Transform Explosion;
 
-	void Start() {
+    void Start()
+    {
         InitialiseEnemy();
-        //difficulty += 1.1f;
-	}
-
-    void InitialiseEnemy(){
     }
 
-	void Update() {
-        Move();
-	}
-
-    void Move() {
-        transform.Translate(-Vector3.forward * Time.deltaTime * (Speed + difficulty));
+    void InitialiseEnemy()
+    {
+        MoveDirection = new Vector3(0, 0, -1);
     }
 
-    void OnTriggerEnter(Collider other) {
+    void OnTriggerEnter(Collider other)
+    {
         Die();
     }
 
-    void OnBecameInvisible() {
-        Die();
+    void Explode()
+    {
+        Instantiate(Explosion, transform.position, transform.rotation);
     }
 
-    void Die() {
-        Destroy(gameObject);
+    void Die()
+    {
+        Explode();
+        Destroy();
     }
+
 }

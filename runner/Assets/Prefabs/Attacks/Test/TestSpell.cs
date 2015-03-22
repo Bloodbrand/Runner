@@ -1,23 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TestSpell : MonoBehaviour {
-
-    float speed = 30.0f;
-
-    void Update(){
-        Move();
+public class TestSpell : movingGameObject
+{
+    void Start()
+    {
+        MoveDirection = new Vector3(0, 0, 1);
     }
 
-    void Move() {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
-    }
-
-    void OnBecameInvisible(){
-        Die();
-    }
-
-    void Die(){
-        Destroy(gameObject);
+    void OnTriggerEnter(Collider other)
+    {
+        Destroy();
     }
 }

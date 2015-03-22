@@ -46,10 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Prefabs\Attacks\Attacks.cs" />
      <Compile Include="Assets\Prefabs\Attacks\Test\TestSpell.cs" />
+     <Compile Include="Assets\Prefabs\Effects\Elementals\Scripts\OrbitCamera.cs" />
+     <Compile Include="Assets\Prefabs\Effects\Elementals\Scripts\TestParticles.cs" />
      <Compile Include="Assets\Prefabs\Enemies\Enemy.cs" />
-     <Compile Include="Assets\Prefabs\Player\Attacks.cs" />
+     <Compile Include="Assets\Prefabs\Scripts\movingGameObject.cs" />
      <Compile Include="Assets\Prefabs\Spawner\Spawner.cs" />
+     <None Include="Assets\Prefabs\Effects\Elementals\!Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
