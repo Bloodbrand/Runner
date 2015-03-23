@@ -31,5 +31,4 @@ public class Enemy : movingGameObject
         Explode();
         Destroy();
     }
-
 }
