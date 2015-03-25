@@ -51,9 +51,12 @@
      <Compile Include="Assets\Prefabs\Effects\Elementals\Scripts\OrbitCamera.cs" />
      <Compile Include="Assets\Prefabs\Effects\Elementals\Scripts\TestParticles.cs" />
      <Compile Include="Assets\Prefabs\Enemies\Enemy.cs" />
+     <Compile Include="Assets\Prefabs\Rooms\1\addForce.cs" />
+     <Compile Include="Assets\Prefabs\Scripts\destroy.cs" />
      <Compile Include="Assets\Prefabs\Scripts\movingGameObject.cs" />
      <Compile Include="Assets\Prefabs\Spawner\Spawner.cs" />
      <None Include="Assets\Prefabs\Effects\Elementals\!Readme.txt" />
+     <None Include="Assets\Prefabs\Enemies\line.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
