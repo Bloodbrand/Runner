@@ -29,7 +29,7 @@ public class addForce : MonoBehaviour {
         Collider[] colliders = Physics.OverlapSphere(position, 100);
         foreach (Collider hit in colliders) {
             if (hit && hit.GetComponent<Rigidbody>())
-                hit.GetComponent<Rigidbody>().AddExplosionForce(2000, position, 25, 3.0F);
+                hit.GetComponent<Rigidbody>().AddExplosionForce(-2000, position, 25, 3.0F);
             
         }    
     }
