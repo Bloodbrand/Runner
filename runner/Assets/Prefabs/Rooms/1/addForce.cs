@@ -5,8 +5,6 @@ public class addForce : MonoBehaviour {
     Ray ray;
     RaycastHit hit;
     [SerializeField] Transform explosion;
-    public float force;
-    public float radius;
 	
     void Update()
     {
@@ -20,7 +18,7 @@ public class addForce : MonoBehaviour {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
-                //AddExplosion(hit.point);
+                AddExplosion(hit.point);
             }
         }	
     }
@@ -28,19 +26,11 @@ public class addForce : MonoBehaviour {
     void AddExplosion(Vector3 position)
     {
         Instantiate(explosion, position, Quaternion.identity);
-        Collider[] colliders = Physics.OverlapSphere(position, radius);
+        Collider[] colliders = Physics.OverlapSphere(position, 100);
         foreach (Collider hit in colliders) {
-            unparent unp = hit.gameObject.GetComponent<unparent>();
-            if (unp != null)
-            {
-                unp.unparentMesh();
-                Destroy(hit.GetComponent<unparent>());
-                Destroy(hit.GetComponent<BoxCollider>());
-
-            } 
             if (hit && hit.GetComponent<Rigidbody>())
-                hit.GetComponent<Rigidbody>().AddExplosionForce(force, position, radius, 3.0F);
+                hit.GetComponent<Rigidbody>().AddExplosionForce(-2000, position, 25, 3.0F);
             
         }    
-    }    
+    }
 }
