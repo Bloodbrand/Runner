@@ -59,8 +59,8 @@
      <Compile Include="Assets\Prefabs\Scripts\rotate.cs" />
      <Compile Include="Assets\Prefabs\Scripts\scrollingUV.cs" />
      <Compile Include="Assets\Prefabs\Spawner\Object.cs" />
-     <Compile Include="Assets\Prefabs\Spawner\Spawner.cs" />
      <Compile Include="Assets\Prefabs\Spawner\dungeon.cs" />
+     <Compile Include="Assets\Prefabs\Spawner\spawner.cs" />
      <None Include="Assets\Prefabs\Effects\Elementals\!Readme.txt" />
      <None Include="Assets\Prefabs\Enemies\line.shader" />
  <Reference Include="UnityEngine.UI">
