@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class spawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
 
     [SerializeField]

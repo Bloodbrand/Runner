@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class dungeon : MonoBehaviour {
-    public spawner roomSpawner;
+    public Spawner roomSpawner;
 
     public void SpawnRoom()
     {
